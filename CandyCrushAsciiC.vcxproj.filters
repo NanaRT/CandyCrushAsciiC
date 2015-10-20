@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers sources\Grid">
+      <UniqueIdentifier>{ab7c55fc-7bb2-4068-9377-dc98c8ceb86d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Grid">
+      <UniqueIdentifier>{ead02754-2a9d-4e8a-b8ac-683788b80f63}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Gem.c">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.c">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ElementsGrid.c">
+      <Filter>Fichiers sources\Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="Grid.c">
+      <Filter>Fichiers sources\Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="LineGrid.c">
+      <Filter>Fichiers sources\Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="Cell.c">
+      <Filter>Fichiers sources\Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="GemGenerator.c">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Position.c">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Movement.c">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CandyCrushAsciiC.rc">
+      <Filter>Fichiers de ressources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Gem.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="GemGenerator.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Cell.h">
+      <Filter>Fichiers d%27en-tête\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="ElementsGrid.h">
+      <Filter>Fichiers d%27en-tête\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="Grid.h">
+      <Filter>Fichiers d%27en-tête\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="LineGrid.h">
+      <Filter>Fichiers d%27en-tête\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="Position.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
