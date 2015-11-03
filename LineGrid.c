@@ -47,15 +47,19 @@ void botLane(int length, int cell)
 	printf("\n");
 }
 
-void jungle(int length, int cell)
+void jungle(int length, int line, int** arrayCells)
 {
+	int cell;
+
 	simpleColumn();
-	for (int i = 1; i < length; i++)
+
+	for (cell = 1; cell < length; cell++)
 	{
-		fullCell(cell);
+		fullCell(line, cell, arrayCells);
 		simpleColumn();
 	}
-	fullCell(cell);
+
+	fullCell(line, cell, arrayCells);
 	simpleColumn();
 	printf("\n");
 }

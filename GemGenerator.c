@@ -10,12 +10,22 @@ int number()
 	return nombre_aleatoire;
 }
 
-int arrayCells(int lengthArray)
+int** arrayCells(int numberCell, int numberLines)
 {
-	int arrayOfCells[1] = ("%d", number());
+	int** arrayOfCells = (int**)malloc(numberLines*sizeof(int));
 
-	for (int i = 2; i = lengthArray; i++)
+	for (int i = 1; i <= numberLines; i++)
 	{
-		arrayOfCells[i] += ("%d", number());
+		arrayOfCells[i] = (int*)malloc(numberCell*sizeof(int));
+		for (int j = 1; j <= numberCell; j++)
+		{
+			arrayOfCells[i][j] = number();
+		}
 	}
+	return arrayOfCells;
+}
+
+int getNumber(int line, int cell, int** arrayCells)
+{
+	return arrayCells[line][cell];
 }

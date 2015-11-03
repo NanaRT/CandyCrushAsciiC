@@ -2,10 +2,9 @@
 #include <stdlib.h>
 #include <wchar.h>
 
-void fullCell(int length)
+void fullCell(int line, int cell, int** arrayCells)
 {
 	empty();
-	/*printf("%d",midLength);*/
-	gemColor(number());
+	gemColor(getNumber(line,cell, arrayCells));
 	empty();
 }

@@ -4,4 +4,8 @@
 
 int number();
 
+int** arrayCells(int numberCell, int numberLines);
+
+int getNumber(int line, int cell, int** arrayCells);
+
 #endif

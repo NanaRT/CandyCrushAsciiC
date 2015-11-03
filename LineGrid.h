@@ -10,6 +10,6 @@ void midLane(int length, int cell);
 
 void botLane(int length, int cell);
 
-void jungle(int length, int cell);
+void jungle(int length, int line, int** arrayCells);
 
 #endif

@@ -11,16 +11,18 @@ void main()
 	int numberLines = 10;
 	int widthCell = 5;
 
-	arrayCells(numberCell*numberLines);
+
+	int ** arrayCell = arrayCells(numberCell, numberLines);
 
 	/*Number of cells, number of lines, width of cells*/
-	generateGrid(numberCell, numberLines, widthCell);
+	generateGrid(numberCell, numberLines, widthCell, arrayCell);
 	setPos(3, 1);
 
 
 	while ((ch = _getch()) != 27) /* 27 = Esc key */
 	{
-		movement(widthCell);
+		movement(numberCell, numberLines, widthCell);
+
 	}
 
 

@@ -154,6 +154,7 @@
     <ClCompile Include="LineGrid.c" />
     <ClCompile Include="Movement.c" />
     <ClCompile Include="Position.c" />
+    <ClCompile Include="Selected.c" />
     <ClCompile Include="Source.c" />
   </ItemGroup>
   <ItemGroup>
@@ -168,6 +169,7 @@
     <ClInclude Include="LineGrid.h" />
     <ClInclude Include="Movement.h" />
     <ClInclude Include="Position.h" />
+    <ClInclude Include="Selected.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

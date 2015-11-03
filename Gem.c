@@ -3,108 +3,6 @@
 #include <wchar.h>
 #include <windows.h>
 
-void gemBlue()
-{
-	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	CONSOLE_SCREEN_BUFFER_INFO consoleInfo;
-	WORD saved_attributes;
-
-	/* Save current attributes */
-	GetConsoleScreenBufferInfo(hConsole, &consoleInfo);
-	saved_attributes = consoleInfo.wAttributes;
-
-	SetConsoleTextAttribute(hConsole, 151);
-	printf("  ");
-
-	/* Restore original attributes */
-	SetConsoleTextAttribute(hConsole, saved_attributes);
-}
-
-void gemGreen()
-{
-	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	CONSOLE_SCREEN_BUFFER_INFO consoleInfo;
-	WORD saved_attributes;
-
-	/* Save current attributes */
-	GetConsoleScreenBufferInfo(hConsole, &consoleInfo);
-	saved_attributes = consoleInfo.wAttributes;
-
-	SetConsoleTextAttribute(hConsole, 32);
-	printf("  ");
-
-	/* Restore original attributes */
-	SetConsoleTextAttribute(hConsole, saved_attributes);
-}
-
-void gemRed()
-{
-	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	CONSOLE_SCREEN_BUFFER_INFO consoleInfo;
-	WORD saved_attributes;
-
-	/* Save current attributes */
-	GetConsoleScreenBufferInfo(hConsole, &consoleInfo);
-	saved_attributes = consoleInfo.wAttributes;
-
-	SetConsoleTextAttribute(hConsole, 64);
-	printf("  ");
-
-	/* Restore original attributes */
-	SetConsoleTextAttribute(hConsole, saved_attributes);
-}
-
-void gemGrey()
-{
-	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	CONSOLE_SCREEN_BUFFER_INFO consoleInfo;
-	WORD saved_attributes;
-
-	/* Save current attributes */
-	GetConsoleScreenBufferInfo(hConsole, &consoleInfo);
-	saved_attributes = consoleInfo.wAttributes;
-
-	SetConsoleTextAttribute(hConsole, 128);
-	printf("  ");
-
-	/* Restore original attributes */
-	SetConsoleTextAttribute(hConsole, saved_attributes);
-}
-
-void gemPink()
-{
-	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	CONSOLE_SCREEN_BUFFER_INFO consoleInfo;
-	WORD saved_attributes;
-
-	/* Save current attributes */
-	GetConsoleScreenBufferInfo(hConsole, &consoleInfo);
-	saved_attributes = consoleInfo.wAttributes;
-
-	SetConsoleTextAttribute(hConsole, 208);
-	printf("  ");
-
-	/* Restore original attributes */
-	SetConsoleTextAttribute(hConsole, saved_attributes);
-}
-
-void gemYellow()
-{
-	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	CONSOLE_SCREEN_BUFFER_INFO consoleInfo;
-	WORD saved_attributes;
-
-	/* Save current attributes */
-	GetConsoleScreenBufferInfo(hConsole, &consoleInfo);
-	saved_attributes = consoleInfo.wAttributes;
-
-	SetConsoleTextAttribute(hConsole, 224);
-	printf("  ");
-
-	/* Restore original attributes */
-	SetConsoleTextAttribute(hConsole, saved_attributes);
-}
-
 void gemHover()
 {
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -122,28 +20,55 @@ void gemHover()
 	SetConsoleTextAttribute(hConsole, saved_attributes);
 }
 
+void createGem(int color)
+{
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+	CONSOLE_SCREEN_BUFFER_INFO consoleInfo;
+	WORD saved_attributes;
+
+	/* Save current attributes */
+	GetConsoleScreenBufferInfo(hConsole, &consoleInfo);
+	saved_attributes = consoleInfo.wAttributes;
+
+	SetConsoleTextAttribute(hConsole, color);
+	printf("  ");
+
+	/* Restore original attributes */
+	SetConsoleTextAttribute(hConsole, saved_attributes);
+}
+
 void gemColor(int number)
 {
+	int color;
+
 	switch (number)
 	{
-		case 1:
-			gemBlue();
-			break;
-		case 2:
-			gemGreen();
-			break;
-		case 3:
-			gemRed();
-			break;
-		case 4:
-			gemGrey();
-			break;
-		case 5:
-			gemPink();
-			break;
-		case 6:
-			gemYellow();
-			break;
+	case 1:
+		//blue = 151
+		color = 151;
+		break;
+	case 2:
+		//green = 32
+		color = 32;
+		break;
+	case 3:
+		//red = 64
+		color = 64;
+		break;
+	case 4:
+		//grey = 128
+		color = 128;
+		break;
+	case 5:
+		//pink = 208
+		color = 208;
+		break;
+	case 6:
+		//yellow = 224
+		color = 224;
+		break;
 	}
+	createGem(color);
 }
+
 

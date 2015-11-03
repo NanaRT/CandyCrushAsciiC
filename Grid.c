@@ -1,13 +1,16 @@
 
-void generateGrid(int length, int height, int cell)
+void generateGrid(int length, int height, int cell, int** arrayCells)
 {
+	int line;
+
 	topLane(length, cell);
 
-	for (int i = 1; i < height; i++)
+	for (line = 1; line < height; line++)
 	{
-		jungle(length, cell);
+		jungle(length, line, arrayCells);
 		midLane(length, cell);
 	}
-	jungle(length, cell);
+
+	jungle(length, line, arrayCells);
 	botLane(length, cell);
 }

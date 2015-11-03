@@ -48,6 +48,9 @@
     <ClCompile Include="Movement.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="Selected.c">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CandyCrushAsciiC.rc">
@@ -77,6 +80,9 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Movement.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Selected.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

@@ -2,14 +2,14 @@
 #ifndef _MOVEMENT_H
 #define _MOVEMENT_H
 
-void movementRight();
+void movementRight(int numberCell, int cell);
 
-void movementLeft();
+void movementLeft(int cell);
 
 void movementUp();
 
-void movementDown();
+void movementDown(int numberLines);
 
-void movement();
+void movement(int numberCell, int numberLines, int cell);
 
 #endif
