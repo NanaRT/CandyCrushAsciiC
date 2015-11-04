@@ -25,7 +25,7 @@ int** arrayCells(int numberCell, int numberLines)
 	return arrayOfCells;
 }
 
-int getNumber(int line, int cell, int** arrayCells)
+int getNumber(int line, int column, int** arrayCells)
 {
-	return arrayCells[line][cell];
+	return arrayCells[line][column];
 }

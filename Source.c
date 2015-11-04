@@ -21,7 +21,7 @@ void main()
 
 	while ((ch = _getch()) != 27) /* 27 = Esc key */
 	{
-		movement(numberCell, numberLines, widthCell);
+		movement(numberCell, numberLines, widthCell, arrayCell);
 
 	}
 

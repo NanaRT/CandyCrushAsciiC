@@ -49,8 +49,8 @@ void movementDown(int numberLines)
 		setPos(x, y);
 	}
 }
-
-void movement(int numberCell, int numberLines,int cell)
+                    
+void movement(int numberCell, int numberLines,int cell, int** arrayCell)
 {
 	int c = _getch();
 	switch (c)
@@ -71,7 +71,7 @@ void movement(int numberCell, int numberLines,int cell)
 		printf("ESC %d\n", c);
 		break;
 	case 32:
-		movementSelectedGem(numberCell, numberLines, cell);
+		movementSelectedGem(numberCell, numberLines, cell, arrayCell);
 		break;
 	default:
 		printf("");

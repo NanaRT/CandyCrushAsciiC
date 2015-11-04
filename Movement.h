@@ -10,6 +10,6 @@ void movementUp();
 
 void movementDown(int numberLines);
 
-void movement(int numberCell, int numberLines, int cell);
+void movement(int numberCell, int numberLines, int cell, int** arrayCell);
 
 #endif

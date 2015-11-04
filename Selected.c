@@ -60,6 +60,59 @@ void movementSelectedDown(int x, int y, int totalY)
 	}
 }
 
+int checkArrayX(int x, int cell)
+{
+	x = (x + 2) / cell;
+	return x;
+}
+
+int checkArrayY(int y)
+{
+	y = (y+1) / 2;
+	return y;
+}
+
+int uncheckArrayX(int x, int cell)
+{
+	x = x * cell - 4;
+	return x;
+}
+
+int uncheckArrayY(int y)
+{
+	y = y * 2 - 1 ;
+	return y;
+}
+
+void switchGems(int x, int y, int** arrayCell, int cell)
+{
+	int PosX = checkArrayX(getPosX(),cell);
+	int PosY = checkArrayY(getPosY());
+	x = checkArrayX(x, cell);
+	y = checkArrayY(y);
+	int valueXY = arrayCell[y][x];
+	int valuePosXPosY = arrayCell[PosY][PosX];
+	int transition = 0;
+
+	transition = valueXY;
+	valueXY = valuePosXPosY;
+	valuePosXPosY = transition;
+	arrayCell[y][x] = valueXY;
+	arrayCell[PosY][PosX] = valuePosXPosY;
+	
+	int beginCellX = uncheckArrayX(x, cell);
+	int beginCellY = uncheckArrayY(y);
+	swipeCell(y, x,  arrayCell, beginCellX, beginCellY);
+
+	int switchCellX = uncheckArrayX(PosX, cell);
+	int switchCellY = uncheckArrayY(PosY);
+	swipeCell(PosY, PosX, arrayCell, switchCellX, switchCellY);
+
+	setPos(switchCellX+2, switchCellY);
+
+	return;
+}
+
 void  movementSelected(int x, int y, int totalX, int totalY, int cell)
 {
 	int c = _getch();
@@ -84,7 +137,7 @@ void  movementSelected(int x, int y, int totalX, int totalY, int cell)
 	}
 }
 
-void movementSelectedGem(int numberCell, int numberLines, int cell)
+void movementSelectedGem(int numberCell, int numberLines, int cell, int** arrayCell)
 {
 	int ch;
 
@@ -97,5 +150,6 @@ void movementSelectedGem(int numberCell, int numberLines, int cell)
 	{
 		movementSelected(x, y, totalX, totalY, cell);
 	}
+	switchGems(x,y, arrayCell, cell);
 	return;
 }
